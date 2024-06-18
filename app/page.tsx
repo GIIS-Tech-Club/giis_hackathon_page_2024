@@ -1,35 +1,23 @@
 import Contact from "@/components/contact";
 import Intro from "@/components/intro";
-import About from "@/components/about";
-import Partnerships from "@/components/partnerships";
-import Gallery from "@/components/gallery"
-import { SparklesCore } from "@/components/ui/sparkles";
+import Sponsors from "@/components/sponsorships";
 import SectionDivider from "@/components/section-divider";
 import { cn } from "@/utils/cn";
-import { TracingBeam } from "@/components/ui/tracing-beam";
+import { motion } from "framer-motion";
+import React from "react";
 
-export default function Home() {
+export default function Hackathon() {
+  const images = [
+    "/hackathon.jpg",
+  ];
   return (
-    <TracingBeam className="px-6">
-    <main className="flex flex-col items-center antialiased px-4">
-      <div className="w-full absolute">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
-      <Intro />
-      <SectionDivider />
-      <About/>
-      <Partnerships/>
-      <Gallery/>
-      <Contact />
+
+      <main className="flex flex-col items-center antialiased px-4 w-full">
+        <Intro />
+        <SectionDivider />
+        <Sponsors/>
+        <Contact />
       </main>
-      </TracingBeam>
+
   );
 }

@@ -4,21 +4,15 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsInstagram } from "react-icons/bs";
-import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { LinkPreview } from "./ui/link-preview";
 import { Button } from "@/components/ui/moving-border";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home",0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-  const words = `Welcome to the Official Website of the GIIS Tech Club`;
+
 
   return (
     <section
-      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
@@ -33,24 +27,38 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/tech_club.jpg"
+              src="/hackathon.jpg"
               alt="GIIS TECH CLUB"
               width={192}
               height={192}
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-[#AED6F1] shadow-xl"
+              className="h-44 w-44 rounded-full object-cover border-[0.35rem] shadow-xl"
             />
           </motion.div>
         </div>
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 font-medium !leading-[1.5] sm:text-xl md:text-2xl lg:text-3xl"
+        className="mb-10 mt-4 px-4 font-medium !leading-[1.5] text-white  sm:text-4xl md:text-6xl lg:text-8xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <TextGenerateEffect words={words} />
+        HACKATHON X
+      </motion.h1>
+
+      <motion.h1
+        className="mb-10 mt-4 px-4 font-medium !leading-[1.5] text-white  sm:text-xl md:text-2xl lg:text-xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <div>Date : 26/27 JULY 2K24</div>
+        <LinkPreview
+          url="https://www.google.com/maps/place/Global+Indian+International+School+SMART+Campus+-+Punggol,+Singapore/@1.3904431,103.9117753,15z/data=!4m6!3m5!1s0x31da17bc6f1b5fe7:0x230a6bb5f639557f!8m2!3d1.3904431!4d103.9117753!16s%2Fg%2F11f5htrc2l?entry=ttu"
+        >
+        <div className="text-white">Venue : Global Indian International School SMART Campus,Singapore</div>
+        </LinkPreview>
+        <div>Registration Fees : $0 or free</div>       
       </motion.h1>
 
       <motion.div
@@ -61,15 +69,16 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <a href="https://www.instagram.com/giistechclub/" target="_blank">
+
+        <Link href="https://googleforms.com">
           <Button
-            style={{ borderRadius: "1.75rem", width: "60px", height: "60px" }} // Increased width and height
-            className="bg-[#AED6F1] flex items-center justify-center text-gray-700 hover:text-gray-950 rounded-lg focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            style={{ borderRadius: "1.75rem", width: "200px", height: "60px" }} // Increased width and height
+            className="bg-gradient-to-br from-[#3A0CA3] via-[#3A0CA3] to-[#3A0CA3] flex items-center justify-center text-white rounded-lg focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           >
-            <BsInstagram style={{ fontSize: "2rem" }} />{" "}
-            {/* Increased the font size of the Instagram icon */}
+            {"Register-->"}
           </Button>
-        </a>
+          </Link>
+
       </motion.div>
     </section>
   );
