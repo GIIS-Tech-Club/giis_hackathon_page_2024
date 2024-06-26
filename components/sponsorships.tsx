@@ -1,49 +1,64 @@
-"use client";
+'use client';
+
 import Image from "next/image";
 import React from "react";
+import { motion, useInView } from "framer-motion";
 import SectionHeading from "./section-heading";
-import { PinContainer } from "@/components/ui/3d-pin";
-import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function Sponsors() {
+  const sponsors = [
+    {
+      name: "DBS",
+      logo: "https://asset.brandfetch.io/idvLc1clqp/idyg486QiS.svg",
+      url: "https://dbs.com/",
+    },
+    {
+      name: "Hack Club",
+      logo: "https://assets.hackclub.com/flag-orpheus-left.svg",
+      url: "https://hackclub.com/",
+    },
+  ];
+
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" });
+
   return (
-    <section id="sponsorships" className="scroll-mt-28 mb-28">
+    <section id="sponsorships" className="scroll-mt-28 mb-28" ref={ref}>
       <SectionHeading>Our Sponsors</SectionHeading>
-      <div className="flex flex-col items-center space-y-8">
-        <div className="flex items-center justify-center bg-white rounded-lg shadow-lg p-4 w-80 h-40 relative">
-          <a href="https://dbs.com/">
-            <Image
-              src="https://asset.brandfetch.io/idvLc1clqp/idyg486QiS.svg"
-              alt="DBS"
-              height={400}
-              width={300}
-              style={{
-                position: 'absolute',
-                top: 30,
-                left: 10,
-                border: 0,
-                zIndex: 999,
-              }}
-            />
-          </a>
-        </div>
-        <div className="flex items-center justify-center bg-white rounded-lg shadow-lg p-4 w-80 h-40 relative">
-          <a href="https://hackclub.com/">
-            <Image
-              src="https://assets.hackclub.com/flag-orpheus-left.svg"
-              alt="Hack Club"
-              height={256}
-              width={256}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 10,
-                border: 0,
-                zIndex: 999,
-              }}
-            />
-          </a>
-        </div>
+      <div className="flex flex-wrap justify-center gap-8">
+        {sponsors.map((sponsor, index) => (
+          <motion.div
+            key={sponsor.name}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5, delay: index * 0.3 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 10
+              }
+            }}
+            className="bg-white rounded-lg shadow-lg p-6 w-80 h-40 flex items-center justify-center hover:shadow-xl transition-shadow duration-300"
+          >
+            <a
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex items-center justify-center"
+            >
+              <Image
+                src={sponsor.logo}
+                alt={sponsor.name}
+                width={200}
+                height={100}
+                objectFit="contain"
+              />
+            </a>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
