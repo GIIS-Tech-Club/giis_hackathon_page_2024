@@ -1,11 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { RefObject } from "react";
 import { motion, useScroll, useInView } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import SectionHeading from "./section-heading";
 
-const faqData = [
+interface FAQData {
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQData[] = [
   {
     question: "Is it accessible?",
     answer: "Yes. It adheres to the WAI-ARIA design pattern and includes keyboard navigation support."
@@ -24,8 +29,16 @@ const faqData = [
   }
 ];
 
-const AccordionItem = ({ question, answer, isOpen, onClick, index }) => {
-  const ref = React.useRef(null);
+interface AccordionItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+  index: number;
+}
+
+const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen, onClick, index }) => {
+  const ref: RefObject<HTMLDivElement> = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
@@ -65,10 +78,10 @@ const AccordionItem = ({ question, answer, isOpen, onClick, index }) => {
   );
 };
 
-export default function FAQ() {
-  const [openItem, setOpenItem] = React.useState(null);
+const FAQ: React.FC = () => {
+  const [openItem, setOpenItem] = React.useState<number | null>(null);
   const { scrollYProgress } = useScroll();
-  const containerRef = React.useRef(null);
+  const containerRef: RefObject<HTMLDivElement> = React.useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
@@ -99,3 +112,5 @@ export default function FAQ() {
     </section>
   );
 }
+
+export default FAQ;
