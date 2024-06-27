@@ -13,7 +13,7 @@ interface FAQData {
 const faqData: FAQData[] = [
  {
     question: "Can I join if I’m not a GIIS student?",
-    answer: "All high school and middle school students (grades 6-12 or equivalent) are welcome to register."
+    answer: "All high school and middle school students (grades 6-12 or equivalent) and of age 18 and below only are welcome to register."
   },
   {
     question: "Do I need a team in order to participate?",
