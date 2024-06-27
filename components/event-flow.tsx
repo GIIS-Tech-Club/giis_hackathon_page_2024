@@ -63,7 +63,7 @@ export default function EventFlow() {
 
   return (
     <section id="event-flow" className="scroll-mt-28 mb-28">
-      <SectionHeading>Event Flow</SectionHeading>
+      <SectionHeading>Timeline</SectionHeading>
       <motion.div
         ref={ref}
         className="max-w-3xl mx-auto mt-8 relative"
