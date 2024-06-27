@@ -6,11 +6,10 @@ import { FiCircle } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 
 const events = [
-  { id: 1, title: "Registration Opens", description: "Sign up for the event" },
-  { id: 2, title: "Opening Ceremony", description: "Welcome address and introductions" },
-  { id: 3, title: "Workshops Begin", description: "Various sessions and hands-on activities" },
-  { id: 4, title: "Networking Lunch", description: "Meet and greet with other participants" },
-  { id: 5, title: "Closing Remarks", description: "Wrap-up and future announcements" },
+  { id: 1, title: "Registration Opens", description: "6:00 PM, 10th July" },
+  { id: 2, title: "Registrations Close", description: "11:59 PM, 18th July" },
+  { id: 3, title: "Opening Ceremony", description: "2:00 PM, 26th July" },
+  { id: 4, title: "Closing Ceremony", description: "5:00 PM, 27th July" }
 ];
 
 const containerVariants = {
