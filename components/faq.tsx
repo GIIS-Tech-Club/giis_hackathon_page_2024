@@ -11,21 +11,25 @@ interface FAQData {
 }
 
 const faqData: FAQData[] = [
-  {
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern and includes keyboard navigation support."
+ {
+    question: "Can I join if I’m not a GIIS student?",
+    answer: "All Singapore school students between the ages of 10 and 18 are welcome to join."
   },
   {
-    question: "Is it styled?",
-    answer: "Absolutely! This FAQ section features a modern, sleek design with smooth animations and responsive layout."
+    question: "Do I need a team in order to participate?",
+    answer: "No. Although registering as a team is recommended, solo participants are free to join as well."
   },
   {
-    question: "Is it animated?",
-    answer: "Yes, it's animated using Framer Motion for smooth transitions and engaging user interactions."
+    question: "Will I need to have prior coding experience?",
+    answer: "No. This hackathon is designed for beginners and experienced programmers alike, and will be a valuable learning opportunity for all."
   },
   {
-    question: "Can it be customized?",
-    answer: "Of course! The design, colors, and animations can be easily customized to fit your project's needs."
+    question: "Will I need to get my own food and drinks?",
+    answer: "No. Meals, snacks and beverages will be provided by us throughout the event for free."
+  },
+  {
+    question: "What should I bring on event day?",
+    answer: "We recommend that you bring along your own laptop and any hardware components you will need for your project. However, younger students may use the computers at the school IT lab and need not bring their own laptops."
   }
 ];
 
