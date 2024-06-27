@@ -6,7 +6,7 @@ import { FiCircle } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 
 const events = [
-  { id: 1, title: "Registration Opens", description: "6:00 PM, 10th July" },
+  { id: 1, title: "Registration Opens", description: "11:59 PM, 4th July" },
   { id: 2, title: "Registrations Close", description: "11:59 PM, 18th July" },
   { id: 3, title: "Opening Ceremony", description: "2:00 PM, 26th July" },
   { id: 4, title: "Closing Ceremony", description: "5:00 PM, 27th July" }
