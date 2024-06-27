@@ -24,7 +24,7 @@ export default function Sponsors() {
 
   return (
     <section id="sponsorships" className="scroll-mt-28 mb-28" ref={ref}>
-      <SectionHeading>Our Sponsors</SectionHeading>
+      <SectionHeading>Our Partners</SectionHeading>
       <div className="flex flex-wrap justify-center gap-8">
         {sponsors.map((sponsor, index) => (
           <motion.div
