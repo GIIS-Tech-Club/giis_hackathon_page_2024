@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
+import { Button } from "@/components/ui/moving-border";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { LinkPreview } from "./ui/link-preview";
-import { Button } from "@/components/ui/moving-border";
 
 export default function Intro() {
   const containerVariants = {
@@ -54,7 +53,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/hackathon.jpg"
+              src="/hackathon_center.jpg"
               alt="GIIS TECH CLUB"
               width={192}
               height={192}
@@ -105,7 +104,7 @@ export default function Intro() {
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         variants={itemVariants}
       >
-        <Link href="https://googleforms.com">
+        <Link href="https://forms.gle/DGP9nh2EgdDDR6uv5">
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
