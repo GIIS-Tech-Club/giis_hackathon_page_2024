@@ -1,17 +1,17 @@
 'use client';
 
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { motion, useInView } from "framer-motion";
 import SectionHeading from "./section-heading";
 
 export default function Partners() {
   const partners = [
-    {
-      name: "DBS",
-      logo: "https://asset.brandfetch.io/idvLc1clqp/idyg486QiS.svg",
-      url: "https://dbs.com/",
-    },
+    // {
+    //   name: "DBS",
+    //   logo: "https://asset.brandfetch.io/idvLc1clqp/idyg486QiS.svg",
+    //   url: "https://dbs.com/",
+    // },
     {
       name: "Hack Club",
       logo: "https://assets.hackclub.com/flag-orpheus-left.svg",
