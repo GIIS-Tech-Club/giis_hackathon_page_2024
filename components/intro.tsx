@@ -69,7 +69,7 @@ export default function Intro() {
         className="mb-10 mt-4 px-4 font-bold !leading-[1.5] text-white sm:text-4xl md:text-6xl lg:text-8xl"
         variants={itemVariants}
       >
-        <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">HACKATHON X</span>
+        <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">GIIS HACKATHON X</span>
       </motion.h1>
 
       <motion.div
