@@ -1,13 +1,13 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
+import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "GIIS Hackathon 2024",
-  description: "GIIS Hackathon 2024",
+  title: "GIIS Hackathon 2K24",
+  description: "GIIS Hackathon 2K24 has arrived!",
 };
 
 export default function RootLayout({

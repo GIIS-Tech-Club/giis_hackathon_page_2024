@@ -12,6 +12,11 @@ export default function Partners() {
       logo: "https://assets.hackclub.com/flag-orpheus-left.svg",
       url: "https://hackclub.com/",
     },
+    {
+      name: "Wolfram",
+      logo: "/wolfram.png",
+      url: "https://wolfram.com/",
+    },
   ];
 
   const sponsor = [
@@ -63,7 +68,7 @@ export default function Partners() {
           </motion.div>
         ))}
       </div>
-      <SectionHeading mt="12">Our Fiscal Sponsor</SectionHeading>
+      <SectionHeading mt="12">Our Fiscal Sponsor and In-Kind Sponsor</SectionHeading>
       <div className="flex flex-wrap justify-center gap-8">
         {fiscalsponsor.map((partner, index) => (
           <motion.div
