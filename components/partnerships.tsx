@@ -32,7 +32,7 @@ export default function Partners() {
 
   return (
     <section id="partnerships" className="scroll-mt-28 mb-28" ref={ref}>
-      <SectionHeading>Our Primary Sponsor</SectionHeading>
+      {/* <SectionHeading>Our Primary Sponsor</SectionHeading>
       <div className="flex flex-wrap justify-center gap-8">
         {sponsor.map((partner, index) => (
           <motion.div
@@ -67,7 +67,7 @@ export default function Partners() {
             </a>
           </motion.div>
         ))}
-      </div>
+      </div> */}
       <SectionHeading mt="12">Our Fiscal Sponsor and In-Kind Sponsor</SectionHeading>
       <div className="flex flex-wrap justify-center gap-8">
         {fiscalsponsor.map((partner, index) => (
