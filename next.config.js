@@ -11,6 +11,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/vol',
+        destination: 'https://docs.google.com/forms/d/e/1FAIpQLSc8YlUwFL1x1SHQlBDLvN3fRt6s4nV3rgz4j1CepBcfdTiU9g/viewform',
+        permanent: true,
+      },
+      {
+        source: '/volunteer',
+        destination: 'https://docs.google.com/forms/d/e/1FAIpQLSc8YlUwFL1x1SHQlBDLvN3fRt6s4nV3rgz4j1CepBcfdTiU9g/viewform',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;
